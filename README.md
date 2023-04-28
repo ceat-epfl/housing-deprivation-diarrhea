@@ -18,7 +18,7 @@ From the repository root, run:
 
 ```bash
 conda env create -f environment.yml
-conda activate sanitation-informal-settlements
+conda activate diarrhea-informal-settlements
 ```
 
 ### 3. Input data
