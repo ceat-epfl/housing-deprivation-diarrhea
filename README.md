@@ -27,4 +27,4 @@ The input datasets are available in the 'data' folder.
 
 ### 4. Run the notebooks
 
-Follow the order indicated in the names of the notebooks: 1-2 (see prefix).
+Follow the order indicated in the names of the notebooks (order given by number in each notebook's prefix).
