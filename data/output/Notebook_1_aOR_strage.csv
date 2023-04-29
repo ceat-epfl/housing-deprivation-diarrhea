@@ -1,0 +1,9 @@
+,general population ( n = 2043),general population ( n = 2043),general population ( n = 2043),general population ( n = 2043),general population ( n = 2043),under-fives subset ( n = 235),under-fives subset ( n = 235),under-fives subset ( n = 235),under-fives subset ( n = 235),under-fives subset ( n = 235)
+,Exposure,Adjusted OR,Lower CI (95%),Upper CI (95%),Significance,Exposure,Adjusted OR,Lower CI (95%),Upper CI (95%),Significance
+1,Water availability (month preceding survey),0.6824105810206212,0.5259423834539398,0.8854281680641258,***,Water availability (month preceding survey),0.6327746697936457,0.325208014901951,1.2312235996187781,Not significant
+2,Access to basic hygiene service,0.6026844523615114,0.457190525207027,0.7944796077167525,****,Access to basic hygiene service,0.36636337231928556,0.1828840298436996,0.7339193077267123,***
+3,Access to basic sanitation service,1.2017921136135958,0.8936726493401645,1.6161446648392153,Not significant,Access to basic sanitation service,1.4802643823184956,0.7310067992975604,2.99748599283387,Not significant
+4,Indoors cooking space,0.5527213930164586,0.41608624801048394,0.7342250308891655,****,Indoors cooking space,0.7009366341002935,0.34616718248292544,1.4192915732215097,Not significant
+5,Precarious dwelling materials,1.7900611101480228,1.3106515515548747,2.4448288900760615,****,Precarious dwelling materials,2.0557743945105154,0.9762996689314711,4.328802411405635,*
+6,Head of household with secondary education,1.5073525696590198,1.1488533587558734,1.9777213096353623,***,Head of household with secondary education,2.109066358474021,1.089952121376287,4.081060825708708,**
+7,Relatively wealthy household,1.5089198174615355,1.1463369939970143,1.9861864595238592,***,Relatively wealthy household,1.2541437396920723,0.6276163003990071,2.506111646254025,Not significant
