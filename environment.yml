@@ -337,4 +337,3 @@ dependencies:
   - zstd=1.5.0=h582d3a0_0
   - pip:
     - matplotlib-scalebar==0.8.1
-prefix: /Users/vitor/miniconda3/envs/LS_Metrics
