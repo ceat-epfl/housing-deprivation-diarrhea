@@ -1,0 +1,285 @@
+
+DICTIONNAIRE OF RAW DATASETS USED IN THE ANALYSIS
+
+
+----------------------------------------------------------------------------------------------------------------------
+DATASETS
+----------------------------------------------------------------------------------------------------------------------
+
+HOUSEHOLD DATA:			household_data.csv
+
+INDIVIDUAL DATA:		individual_data.csv
+
+
+----------------------------------------------------------------------------------------------------------------------
+HOUSEHOLD DATA - VARIABLES' DETAILS & CODING
+----------------------------------------------------------------------------------------------------------------------
+
+KEY:				household's unique table ID
+
+Site:				settlement where household is located
+variable type:			categorical
+variable's unique values:	['Azito', 'Williamsville']
+
+SurveyArea:			specific survey area where the household data was collected (in relation with shapefiles in 'maps' folder)
+variable type:			categorical
+variable's unique values:	['AZ1', 'AZ2', 'AZ3', 'AZ4', 'AZ5',
+				 'W1', 'W2', 'W3', 'W4', 'W5']
+
+DrinkingWaterGroup:		general location of facility
+variable type:			categorical
+				['Private', 'Surface', 'Public']
+				'Private' = located within a dwelling or an inner-yard
+				'Surface' = no facility (water obtained any natural source)
+				'Public' = located in a public area
+				NaN = unkown / respondent did not answer
+
+DrinkingWater_Private:		specific type of facility, PRIVATE location only
+variable type:			categorical
+				['Piped_dwel', 'Piped_yard', 'Piped_neigh']
+				'Piped_dwel' = water piped to own dwelling
+				'Piped_yard' = water piped to own yard
+				'Piped_neigh' = water obtained from a neghboring dwelling, piped to a private location
+				NaN = not applicable
+
+DrinkingWater_Public:		specific type of facility, PUBLIC location only
+variable type:			categorical
+				['Piped_dwel', 'Piped_yard', 'Piped_neigh']
+				'Piped_dwel' = water piped to own dwelling
+				'Piped_yard' = water piped to own yard
+				'Piped_neigh' = water obtained from a neghboring dwelling, piped to a private location
+				NaN = not applicable
+
+DrinkingWaterDist:		time needed for a round-trip to obtain water, PUBLIC location only
+variable type:			continuous
+				9999 = unkown / respondent did not answer
+				NaN = not applicable
+
+DrinkingWaterPaySocial:		whether household benefits from a subsidized connection to the municipal water network
+variable's unique values:	['N', 'Y']
+Coding:				'N' = No (no subsidy)
+				'Y' = Yes (subsidized connection)
+				NaN = unkown / respondent did not answer
+
+DrinkingWaterAvailability:	whether the household did NOT have sufficient water, once or more, in the month preceding the survey
+variable's unique values:	['N', 'Y']
+Coding:				'N' = No (did not lack water)
+				'Y' = Yes (lacked water)
+				NaN = unkown / respondent did not answer
+
+ObsHandWashPLACE:		observed hand-hygiene amenity
+variable type:			categorical
+variable's unique values:	['Obs_Fixed', 'Obs_Mobile']
+Coding:				'Obs_Fixed' = fixed structure was observed by enumerator
+				'Obs_Mobile' = mobile hand-washing item was observed by enumerator
+				NaN = no data (observation of hand-hygiene amenity was not possible)
+
+ObsHandWashSOAP:		observed product used to wash hands
+variable type:			categorical
+variable's unique values:	['AshOrMudOrSand', 'None', 'SoapOrDeterg']
+Coding:				'AshOrMudOrSand' = alternative hand cleansing materials were observed by enumerator
+				'None' = absence of hand cleansing materials
+				'SoapOrDeterg' = soap and/or detergent was observed by enumerator
+				NaN = no data (observation of cleansing materials was not possible)
+
+ObsHandWashWATER:		whether the household had water at the moment of the survey
+variable type:			categorical
+variable's unique values:	['Water_OK', 'Water_NOT_OK']
+Coding:				'Water_OK' = water was available at the moment of the survey (observed)
+				'Water_NOT_OK' = absence of water at the moment of the survey (observed)
+				NaN = no data (observation of water availability was not possible)
+
+ToiletFacility:			location of most used toilet
+variable type:			categorical
+variable's unique values:	['Neighb_YardPlot', 'Neighb_Dwelling','NoFacility_Nature',
+				'Own_Dwelling', 'Own_YardPlot',
+				'Public']
+Coding:				'Neighb_YardPlot' = toilet located at a neighbor's yard/plot
+				'Neighb_Dwelling' = toilet located in a neighbor's dwelling
+				'NoFacility_Nature' = no facility (open defecation)
+				'Own_Dwelling' = toilet located in own dwelling
+				'Own_YardPlot' = toilet located in own yard/plot
+				'Public' = toilet located in a public area
+				NaN = unkown / respondent did not answer
+
+ToiletFacilityTYPE:		type of most used toilet (based on contention and evacuation of excreta)
+variable type:			categorical
+variable's unique values:	['Bucket', 'DryOrCompost', 'Flush', 'FreshFit', 'Hanging', 'Other']
+Coding:				'Bucket' = bucket used as toilet
+				'DryOrCompost' = dry or composting toilet (no water used to evacuate excreta)
+				'Flush' = flush toilet
+				'FreshFit' = bucket-toilet provided by Sanergy (Nairobi only)
+				'Hanging' = hanging toilet structure (no contention of excreta)
+				'Other' = other toilet type
+				NaN = unkown / respondent did not answer
+
+ToiletFacilityTYPE_Dry:		for dry toilets, specific type
+variable type:			categorical
+variable's unique values:	['Composting', 'Dry_FreshLife', 'Dry_ImprSlab', 'Dry_UnimpLat', 'Dry_VIP']
+Coding:				'Composting' = composting toilet
+				'Dry_FreshLife' = Freshlife toilet provided by Sanergy (Nairobi only)
+				'Dry_ImprSlab' = improved latrine (with proper slab)
+				'Dry_UnimpLat' = unimproved latrine (without slab)
+				'Dry_VIP' = ventilated, improved pit latrine
+				NaN = unkown / respondent did not answer
+
+ToiletFacilityTYPE_Flush:	for flush toilets, specific type
+variable type:			categorical
+variable's unique values:	['Flush_coveredPit', 'Flush_NA','Flush_other',
+				'Flush_piped', 'Flush_river', 'Flush_septic_tank']
+Coding:				'Flush_coveredPit' = flushes to covered pit
+				'Flush_piped' = flushes to piped sewerage
+				'Flush_river' = flushes to river
+				'Flush_septic_tank' = flushes to septic tank
+				'Flush_other' = flushes to alternative destination
+				'Flush_NA' = flushes to unknown destination
+				NaN = unkown / respondent did not answer
+
+ToiletFacilitySHARE:		whether the most used toilet is shared with one or more households
+variable type:			categorical
+variable's unique values:	['N', 'Y']
+Coding:				'N' = No (not shared)
+				'Y' = Yes (shared)
+				NaN = unkown / respondent did not answer
+
+ToiletFacilityROOF:		(Abidjan only) whether the most used toilet has a roof
+variable type:			categorical
+variable's unique values:	['N', 'Y']
+Coding:				'N' = No (not shared)
+				'Y' = Yes (shared)
+				NaN = unkown / respondent did not answer
+
+ToiletFacilityCLEAN:		hygiene conditions of the most used toilet, as perceived by the respondent
+variable type:			categorical
+variable's unique values:	['Clean', 'Dirty', 'V_Clean', 'V_Dirty']
+Coding:				'V_Clean' = very clean
+				'Clean' = clean
+				'Dirty' = dirty
+				'V_Dirty' = very dirty
+				NaN = unkown / respondent did not answer
+
+HHITEMS/[name of item]:		whether the household has the item in question
+variable type:			binary
+variable's unique values:	[0, 1]
+Coding:				0 = No (does not have the item in question)
+				1 = Yes (has the item)
+
+HHITEMS/Noitems:		whether the household has NONE of the items listed
+variable type:			binary
+variable's unique values:	[0, 1]
+Coding:				0 = No (has at least one of the items)
+				1 = Yes (does not have any of the items)
+
+HHITEMS/NA:			whether it was not possible to know how many items the household had
+variable type:			binary
+variable's unique values:	[0, 1]
+Coding:				0 = No (information about items was collected)
+				1 = Yes (not possible to collect this information)
+
+HHEXTWALLS:			material used to build exterior walls of the dwelling
+variable type:			categorical
+variable's unique values:	['Covered_adobe', 'ReusedWoodOrBamboo', 'Stone_mud', 'Metal', 'Planks_Shingles']
+Coding:				'Covered_adobe' = finished walls, covered with adobe
+				'Planks_Shingles' = finished walls built with wooden planks
+				'ReusedWoodOrBamboo' = rudimentary walls built with reused wood and/or bamboo
+				'Stone_mud' = rudimentary walls built with stones and/or mud
+				'Metal' = rudimentary walls built with metallic sheets
+				NaN = information not obtained
+
+HHROOF:				material used to build the roof of the dwelling
+variable type:			categorical
+variable's unique values:	['CementFiber', 'CeramicTiles', 'Metal', 'Concrete',
+				'Rustic_toles_fibr', 'Rustic_metal', 'Rustic_planks', 'Rustic_plastic']
+Coding:				'CementFiber' = finished roof built with cement fiber sheets
+				'CeramicTiles' = finished roof built with ceramic tiles
+				'Metal' = finished roof built with metallic sheets
+				'Concrete' = finished roof built with concrete slab
+				'Rustic_toles_fibr' = rudimentary roof built with reused cement fiber sheets
+				'Rustic_metal' = rudimentary roof built with reused metallic sheets
+				'Rustic_planks' = rudimentary roof built with reused wooden planks
+				'Rustic_plastic' = rudimentary roof built with plastic objects
+				NaN = information not obtained
+
+HHFLOOR:			material used in the floor of the dwelling's indoor spaces
+variable type:			categorical
+variable's unique values:	['Cement', 'Ceramic', 'Carpet', 'Other']
+Coding:				'Cement' = finished cement floor
+				'Ceramic' = finished ceramic floor
+				'Carpet' = finished floor covered by carpet
+				'Other' = other material 
+				NaN = information not obtained
+
+HHROOMS:			number of habitable rooms in the dwelling
+variable type:			continuous
+Coding:				NaN = information not obtained
+
+HHCOOKING:			whether the dwelling had an indoor cooking space
+variable type:			binary
+variable's unique values:	[0, 1]
+Coding:				0 = No
+				1 = Yes
+
+StreetFood:			frequency of consumption of street food
+variable type:			categorical
+variable's unique values:	['0_1', '2_4', '5_Or_More']
+Coding:				'0_1' = nover, or once a week
+				'2_4' = from twice to four times a week
+				'5_Or_More' = five or more times a week
+				NaN = unkown / respondent did not answer
+
+
+----------------------------------------------------------------------------------------------------------------------
+INDIVIDUAL DATA - VARIABLES' DETAILS & CODING
+----------------------------------------------------------------------------------------------------------------------
+
+KEY:				individual's unique ID
+
+PARENT_KEY:			household's unique table ID
+
+Site:				settlement where household is located
+variable type:			categorical
+variable's unique values:	['Azito', 'Williamsville']
+
+Relation_to_HH:			relation to head of household
+variable type:			categorical
+variable's unique values:	['GndC', 'Head', 'Nrel', 'Other', 'Par', 'S_D', 'W_H']
+Coding:				'Head' = head of household
+				'W_H' = wife or husband
+				'Par' = parent
+				'S_D' = son or daughter
+				'GndC' = grand-child
+				'Nrel' = not related
+				'Other' = other
+				NaN = unkown / respondent did not answer
+
+Age:				age of individual
+variable type:			continuous
+units:				years (completed)
+
+Sex:				sex of individual
+variable type:			categorical
+variable's unique values:	['F', 'M']
+Coding:				'F' = female
+				'M' = male
+				NaN = unkown / respondent did not answer
+
+School_past:			highest education level attained by individual
+variable type:			categorical
+variable's unique values:	['Coranic', 'Early_CdE', 'High_Ed', 'No_Edu', 'Primary',
+				'Secondary', 'Secondary_1', 'Secondary_2']
+Coding:				'Early_CdE' = early-childhood education
+				'Primary' = primary education
+				'Coranic' = coranic education (attended coranic school)
+				'S_D' = son or daughter
+				'Secondary' = 'Secondary_1' = 'Secondary_2' = secondary education
+				'High_Ed' = higher education
+				'No_Edu' = no education
+				NaN = unkown / respondent did not answer
+
+Diarrhoea:			whether individual had diarrhea in the two weeks preceding the survey
+variable type:			categorical
+variable's unique values:	['N', 'Y']
+Coding:				'N' = No (not shared)
+				'Y' = Yes (shared)
+				NaN = unkown / respondent did not answer
+
