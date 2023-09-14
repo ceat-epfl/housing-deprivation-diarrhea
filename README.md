@@ -4,7 +4,7 @@
 
 A replicable computational workflow to assess the association between housing deprivation features and the odds of diarrhea, based on cross-sectional household surveys.
 
-**Citation:** Pessoa Colombo V, Chenal J, Koné B, Koffi JA, Utzinger J. Water, sanitation, and hygiene services are insufficient to prevent diarrhea in informal settlements: results from a cross-sectional study in Abidjan, Côte d’Ivoire. Int J Urban Health. 2023. https://doi.org/10.1007/s11524-023-00786-z.
+**Citation:** Pessoa Colombo V, Chenal J, Koné B, Koffi JA, Utzinger J. Spatial distributions of diarrheal cases in relation to housing conditions in informal settlements: a cross-sectional study in Abidjan, Côte d'Ivoire. Int J Urban Health. 2023. https://doi.org/10.1007/s11524-023-00786-z.
 
 ## Instructions to reproduce the analysis
 
